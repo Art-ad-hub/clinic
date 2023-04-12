@@ -13,16 +13,16 @@ namespace clinic
         {
             int peopleInQueue;
             int waitingTimeOnePerson = 10;
-            int hour;
-            int minute;
+            int waitingHour;
+            int waitingMinute;
             int minuteInHour = 60;
 
             Console.Write("Сколько человек перед вами в очереди: ");
             peopleInQueue = Convert.ToInt32(Console.ReadLine());
-            minute = peopleInQueue * waitingTimeOnePerson;
-            hour = minute / minuteInHour;
-            minute = minute % minuteInHour;
-            Console.WriteLine($"Вам придется подождать в очереди {hour}ч.{minute}минут.");
+            waitingMinute = peopleInQueue * waitingTimeOnePerson;
+            waitingHour = waitingMinute / minuteInHour;
+            waitingMinute = waitingMinute % minuteInHour;
+            Console.WriteLine($"Вам придется подождать в очереди {waitingHour}ч.{waitingMinute}минут.");
         }
     }
 }
